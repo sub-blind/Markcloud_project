@@ -129,7 +129,7 @@ app/
 
 ---
 
-## 💡 문제 해결 과정
+## 문제 해결 과정
 
 ### 1. 결측치 처리 문제
 
@@ -188,7 +188,7 @@ CREATE INDEX idx_chosung ON trademarks(chosung)
 
 ---
 
-## 🔮 개선하고 싶은 부분
+## 개선하고 싶은 부분
 
 ### 시간이 더 있었다면 구현했을 기능
 
@@ -234,7 +234,7 @@ def test_search_basic():
 
 ---
 
-## 📁 프로젝트 구조
+##  프로젝트 구조
 
 ```
 trademark-api/
