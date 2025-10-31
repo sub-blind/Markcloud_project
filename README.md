@@ -10,7 +10,7 @@ pip install -r requirements.txt
 
 ### 2. 데이터베이스 초기화
 ```bash
-python scripts/init_db.py
+python -m app.scripts.init_db
 ```
 
 ### 3. 서버 실행
