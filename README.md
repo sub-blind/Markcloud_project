@@ -10,7 +10,7 @@ pip install -r requirements.txt
 
 ### 2. 데이터베이스 초기화
 ```bash
-python scripts/init_db.py
+python -m app.scripts.init_db
 ```
 
 ### 3. 서버 실행
@@ -42,7 +42,6 @@ curl "http://localhost:8000/api/search?q=삼성&status=등록&code=09"
 **주요 기능:**
 - 키워드 검색 (한글/영문/초성 모두 지원)
 - 다중 필터링 (상태, 상품 코드, 날짜 범위)
-- 페이지네이션
 
 **파라미터:**
 
@@ -79,7 +78,6 @@ curl "http://localhost:8000/api/search?q=삼성&status=등록&code=09"
 ### 2. 초성 검색
 - "ㅅㅅ" 입력 시 "삼성" 자동 매칭
 - 모바일 환경 최적화
-- 타이핑 75% 감소 효과
 
 ---
 
@@ -144,7 +142,6 @@ app/
 WHERE name_kr LIKE '%삼성%' OR name_en LIKE '%SAMSUNG%'
 ```
 
-**의사결정:**
 - 별도 null 체크 불필요
 - 한글/영문 둘 다 검색하여 커버율 향상
 - Optional 타입으로 API에서 명시적 처리
@@ -261,20 +258,3 @@ trademark-api/
 ```
 
 ---
-
-## 💻 DB 확인 방법
-
-### SQLite CLI로 확인
-```bash
-# DB 열기
-sqlite3 trademark.db
-
-# 테이블 목록 보기
-.tables
-
-# 테이블 구조 보기
-.schema trademarks
-
-# 데이터 조회
-SELECT * FROM trademarks LIMIT 10;
-```
