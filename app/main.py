@@ -31,11 +31,6 @@ app.include_router(search.router)
 
 @app.on_event("startup")
 async def startup_event():
-    """
-    애플리케이션 시작 시 실행되는 초기화 작업
-    
-    데이터베이스 테이블과 인덱스를 생성합니다.
-    """
     init_db()
 
 
@@ -61,9 +56,7 @@ async def root():
 @app.get("/health", tags=["Root"])
 async def health_check():
     """
-    헬스 체크 엔드포인트
-    
-    서비스의 정상 작동 여부를 확인합니다.
+    서비스의 정상 작동 여부를 확인
     """
     return {"status": "healthy"}
 

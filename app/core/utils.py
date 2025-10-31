@@ -1,13 +1,10 @@
 def get_chosung(text: str) -> str:
     """
     한글 텍스트에서 초성을 추출하는 함수
-
     Args:
         text: 한글 텍스트
-
     Returns:
         str: 초성
-
     Examples:
         >>> get_chosung("안녕하세요")
         'ㅇㅇㅎㅅ'
@@ -31,10 +28,8 @@ def get_chosung(text: str) -> str:
 def is_chosung(text: str) -> bool:
     """
     초성으로만 이루어져 있는지
-
     Args:
         text: 텍스트
-    
     Returns:
         true
     """
